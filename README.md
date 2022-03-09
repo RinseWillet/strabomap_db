@@ -1,4 +1,4 @@
-#trabomap_db
+#strabomap_db
 
 This is a docker-compose yaml file which constructs a container with :
 
