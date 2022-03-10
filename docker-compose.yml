@@ -7,7 +7,7 @@ volumes:
 services:
 
   db:
-    container_name: postgis_container
+    container_name: postgis
     image: kartoza/postgis:14-3.1
     volumes:
       - postgis-data:/var/lib/postgresql
