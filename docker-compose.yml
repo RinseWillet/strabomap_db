@@ -15,8 +15,8 @@ services:
     environment:
       # If you need to create multiple database you can add coma separated databases eg gis,data
       - POSTGRES_DB=gis
-      - POSTGRES_USER=rinse
-      - POSTGRES_PASS=Spitfire5
+      - POSTGRES_USER=root
+      - POSTGRES_PASS=root
       - ALLOW_IP_RANGE=0.0.0.0/0
       # Add extensions you need to be enabled by default in the DB. Default are the five specified below
       - POSTGRES_MULTIPLE_EXTENSIONS=postgis,hstore,postgis_topology,postgis_raster,pgrouting
@@ -33,8 +33,8 @@ services:
       - dbbackups:/backups
     environment:
       - DUMPPREFIX=PG_db
-      - POSTGRES_USER=rinse
-      - POSTGRES_PASS=Spitfire5
+      - POSTGRES_USER=root
+      - POSTGRES_PASS=root
       - POSTGRES_PORT=5432
       - POSTGRES_HOST=db
       - POSTGRES_DBNAME=gis
@@ -48,7 +48,7 @@ services:
       image: dpage/pgadmin4
       restart: always
       environment:
-        PGADMIN_DEFAULT_EMAIL: r.willet@gmail.com
+        PGADMIN_DEFAULT_EMAIL: admin@admin.com
         PGADMIN_DEFAULT_PASSWORD: root
       ports:
         - "5050:80"
